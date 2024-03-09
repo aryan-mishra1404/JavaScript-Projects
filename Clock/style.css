@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 body{
+    background-color: rgb(109, 135, 110);
     display: flex;
     flex-direction: column;
     align-items: center;
     /* text-align: center  ; */
     justify-content: center;
     position: relative;
+   
 
 }
 h1{
@@ -18,9 +20,24 @@ h1{
     font-family: serif;
     margin-bottom: 50px;
 }
-/* .layout{
-    position: absolute;  
-} */
+button{
+    font-size: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top :20em;
+    right: 15rem;
+    border-radius: 20px;
+    font-weight: 500;
+    background-color:  rgb(109, 135, 110);
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgb(61, 60, 60);
+}
+.layout{
+    transition: all 2s ease-in-out;
+    overflow:hidden;
+}
 
 .clock{
     width: 30rem;
@@ -33,6 +50,7 @@ h1{
     border-radius: 50% ;
     position: relative;
     display: flex;
+   
     /* z-index: 10; */
 
 }
@@ -246,6 +264,7 @@ img{
     border: 1px ridge rgb(124, 174, 146);
     outline: rgb(109, 135, 110) solid 7px;
     border-radius: 50% ;
+    
     /* filter: blur(3px); */
     /* box-shadow: inset 0 0 20px rgba(255, 255, 255, .5); */
     /* filter: blur(1px); */

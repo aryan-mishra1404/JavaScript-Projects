@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center  ; */
+    justify-content: center;
+    position: relative;
+
+}
+h1{
+    font-size: 5rem;
+    font-style: bold;
+    font-family: serif;
+    margin-bottom: 50px;
+}
+/* .layout{
+    position: absolute;  
+} */
+
+.clock{
+    width: 30rem;
+    height: 30rem;
+    /* background-color: rgb(118, 165, 137); */
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 4px 20px;
+    border: 1px ridge rgb(124, 174, 146);
+    outline: rgb(109, 135, 110) solid 7px;
+    border-radius: 50% ;
+    position: relative;
+    display: flex;
+    /* z-index: 10; */
+
+}
+
+img{
+    width: 16rem;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+
+.numbers{
+    
+    color: rgba(181, 225, 183, 0.7);
+    text-shadow: 1px 1px 5px rgba(181, 225, 183,.9);
+    font-size: 2.5rem;
+    z-index: 2;
+    
+}
+
+ #twelve{
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+#three{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+ #six{
+    position: absolute;
+    bottom: 4%;
+    right: 51%;
+    transform: translateX(50%);
+    /* transform: translateY(50%); */
+    
+}
+#nine{
+    position: absolute;
+    left: 6%;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+
+
+
+
+.bars h3{
+    position: absolute; 
+    background-color: rgba(255, 255, 255, 0.079);
+    box-shadow: 1px 1px 5px rgb(181, 225, 183);
+    width: .5rem;
+    height: 1rem;
+    z-index: 1;
+    /* transform: rotate(90deg); */
+    
+    
+}
+
+#bar-twelve{
+    height: 1rem;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#bar-three{
+    height: 1rem;
+    right: 2%;
+    top: 48%;
+    transform: rotate(90deg);
+}
+
+#bar-six{
+    height: 1rem;
+    bottom: 1%;
+    right: 51%;
+    transform: translateX(50%);
+}
+
+#bar-nine{
+    height: 1rem;
+    left: 2%;
+    top: 48%;
+    transform: rotate(90deg);
+}
+
+
+
+
+
+#bar1{
+    /* position: absolute; */
+    right: 12%;
+    top: 21%;
+    transform: rotate(45deg);
+}
+#bar2{
+    /* position: absolute; */
+    right: 12%;
+    bottom: 21%;
+    transform: rotate(-45deg);
+}
+#bar3{
+    /* position: absolute; */
+    left: 12%;
+    bottom: 20%;
+    transform: rotate(225deg);
+}
+
+#bar4{
+    /* position: absolute; */
+    left: 12%;
+    top: 20%;
+    transform: rotate(-225deg);
+}
+
+
+
+
+.arrows{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* z-index: 4; */
+    
+}
+
+/* making the arrow division box a kind of content element so that it can perform beyond a simple box */
+
+.arrows::before{
+    content: "O";
+    font: 900px;
+    color:rgba(181, 225, 183, 0.7);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+    text-align: center;
+    padding-bottom: 2px;
+    font-size: 10px;
+    width: 2%;
+    height: 2%;
+    border-radius: 50%;
+    background-color: rgba(181, 225, 183, 0.238);
+    /* box-shadow: 1px 1px 5px rgb(255, 255, 255); */
+    z-index: 5;
+    /* text-shadow: 1px 1px 5px rgba(181, 225, 183,.9); */
+    
+}
+
+.arrows div{
+    position: absolute;
+    background-color: rgba(181, 225, 183, 0.7);
+    width: 1.5%;
+    height: 35%;
+    transform-origin: bottom center;
+    bottom: 50%;
+    /* border: 1px solid rgba(218, 165, 32, 0.516); */
+    border-radius:45% 45% 25% 25% ;
+    box-shadow: 1px 1px 3px rgba(218, 165, 32, 0.516) ;
+    /* box-shadow: 1px 1px 5px rgba(181, 225, 183,.9); */
+    z-index: 3;
+}
+
+.arrows .hour{
+    width: 1.8%;
+    
+    height: 25%;
+    /* transform: rotate(30deg); */
+    border-radius:35% 35% 25% 25% ;
+}   
+
+.arrows .minute{
+    /* transform: rotate(230deg); */
+    
+    z-index: 4;
+}   
+.arrows .second{
+    width: 1%;
+    height: 37%; 
+    /* transform: rotate(90deg); */
+    border-radius:50% 50% 25% 25%;
+    /* background-color: rgba(181, 225, 183,.8); */
+    background-color: rgba(181, 225, 183, 0.7);
+    z-index: 5;
+}   
+
+
+.digiClock{
+    /* display: none; */
+    visibility: hidden;
+    z-index: 2;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 30rem;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 4px 20px;
+    border: 1px ridge rgb(124, 174, 146);
+    outline: rgb(109, 135, 110) solid 7px;
+    border-radius: 50% ;
+    /* filter: blur(3px); */
+    /* box-shadow: inset 0 0 20px rgba(255, 255, 255, .5); */
+    /* filter: blur(1px); */
+
+}
+
+.digiLogo{
+    width: 16rem;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+.digiDisplay{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%);
+    transform: translateY(-50%); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgba(195, 227, 165, 0.347); */
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 30%;
+    padding: 3rem;
+    /* box-shadow: 1px 1px 3px rgba(29, 29, 29,.6); */
+     box-shadow: inset 0 0 200px rgba(20, 39, 2);
+     filter: blur(.1px); 
+   
+    /* z-index: ; */
+}
+
+.digiHour, .digiMinute, .digiSecond{
+    /* position: absolute; */
+    color:rgba(181, 225, 183, 0.9);
+    font-size: 5rem;
+    font-weight: bolder;
+    padding: 0 1rem;
+   
+    /* text-align: center; */
+    flex-basis: 30%;
+ 
+}
+.digiHour, .digiMinute{
+    border-right: 1px solid rgba(181, 225, 183, 0.9);
+}
